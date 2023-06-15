@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useRef } from "react"
 import NavBar from "./components/navBar/NavBar"
 import leafBackground from "./assets/img/leafBackground.png"
 import leaf2 from "./assets/img/leaf2.png"
@@ -12,11 +12,34 @@ import values from "./assets/img/values.png"
 import { motion } from "framer-motion"
 import { aboutVariants, heroVariants } from "./utils/motion"
 import { BsChevronCompactUp } from "react-icons/bs"
+import Footer from "./components/footer/Footer"
 function App() {
+  const startHef = useRef(null)
+  const histHef = useRef(null)
+  const instHef = useRef(null)
+  const franqHef = useRef(null)
+
+  const scrollInto = (prop) => {
+    switch (prop) {
+      case "start":
+        startHef.current.scrollIntoView()
+        break
+      case "hist":
+        histHef.current.scrollIntoView()
+        break
+      case "inst":
+        instHef.current.scrollIntoView()
+        break
+      case "franq":
+        franqHef.current.scrollIntoView()
+        break
+    }
+  }
+
   return (
     <>
-      <NavBar />
-      <main className="content-main">
+      <NavBar scrollInto={scrollInto} />
+      <main className="content-main" ref={startHef}>
         <motion.img
           src={leafBackground}
           alt=""
@@ -67,7 +90,7 @@ function App() {
         </section>
       </main>
       <section className="product-carousel"></section>
-      <section className="our-history">
+      <section className="our-history" ref={histHef}>
         <main className="history-content">
           <div className="hist-image">
             <motion.img
@@ -106,7 +129,7 @@ function App() {
           </motion.div>
         </main>
       </section>
-      <section className="inst-video">
+      <section className="inst-video" ref={instHef}>
         <main className="video-content">
           <img src={videobg1} alt="" />
           <img src={videobg2} alt="" />
@@ -156,7 +179,7 @@ function App() {
           </div>
         </main>
       </section>
-      <section className="franq">
+      <section className="franq" ref={franqHef}>
         <main className="franq-content">
           <h1>Seja um Franqueado</h1>
           <div className="qualities">
@@ -182,6 +205,7 @@ function App() {
       <section className="insta">
         <main className="insta-main"></main>
       </section>
+      <Footer scrollInto={scrollInto} />
     </>
   )
 }

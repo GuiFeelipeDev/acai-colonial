@@ -1,6 +1,6 @@
 export const navlinks = [
-  { name: "Inicio", link: "" },
-  { name: "Nossa História", link: "" },
-  { name: "Instituição", link: "" },
-  { name: "Franquias", link: "" },
+  { name: "Inicio", link: "start" },
+  { name: "Nossa História", link: "hist" },
+  { name: "Instituição", link: "inst" },
+  { name: "Franquias", link: "franq" },
 ]
