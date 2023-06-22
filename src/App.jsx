@@ -1,4 +1,4 @@
-import React, { useRef } from "react"
+import React, { useLayoutEffect, useRef, useState } from "react"
 import NavBar from "./components/navBar/NavBar"
 import leafBackground from "./assets/img/leafBackground.png"
 import leaf2 from "./assets/img/leaf2.png"
@@ -13,12 +13,13 @@ import { motion } from "framer-motion"
 import { aboutVariants, heroVariants } from "./utils/motion"
 import { BsChevronCompactUp } from "react-icons/bs"
 import Footer from "./components/footer/Footer"
+import SwiperProds from "./components/swiper/SwiperProds"
 function App() {
   const startHef = useRef(null)
   const histHef = useRef(null)
   const instHef = useRef(null)
   const franqHef = useRef(null)
-
+  const quantRef = useRef(null)
   const scrollInto = (prop) => {
     switch (prop) {
       case "start":
@@ -36,6 +37,12 @@ function App() {
     }
   }
 
+  const [width, setWidth] = useState(0)
+
+  useLayoutEffect(() => {
+    setWidth(quantRef.current.offsetWidth)
+  }, [])
+
   return (
     <>
       <NavBar scrollInto={scrollInto} />
@@ -49,15 +56,17 @@ function App() {
           variants={heroVariants}
           viewport={{ once: true, amount: 0.25 }}
         />
-        <motion.img
-          src={leaf2}
-          alt=""
-          className="leaf2"
-          initial="hidden"
-          whileInView="show"
-          variants={aboutVariants}
-          viewport={{ once: true, amount: 0.25 }}
-        />
+        <div className="leaf-container">
+          <motion.img
+            src={leaf2}
+            alt=""
+            className="leaf2"
+            initial="hidden"
+            whileInView="show"
+            variants={aboutVariants}
+            viewport={{ once: true, amount: 0.25 }}
+          />
+        </div>
         <section className="start-section">
           <motion.img
             src={startImage}
@@ -76,20 +85,31 @@ function App() {
           >
             <div className="texts">
               <h1>AÇAÍ COLONIAL</h1>
-              <h3>"O melhor açai de Rondonia"</h3>
+              <h3>"O melhor açaí de Rondônia"</h3>
               <p>
-                Pirate ipsum arrgh bounty warp jack. Pirate chain locker yarr
-                bilge topsail lugsail pink cat. Tender yard furl tell yard cat.
-                Jib bucko pillage yer yellow lugsail heave line lanyard scourge.
+                Para nós, açaí não é só para saborear, mas também aproveitar a
+                companhia das pessoas que amamos. Venha fazer parte dessa
+                família.
               </p>
             </div>
-            <button className="start-button">Fale conosco</button>
+            <button
+              className="start-button"
+              onClick={() =>
+                window.open("https://www.instagram.com/acaicolonialjipa/")
+              }
+            >
+              Saiba Mais
+            </button>
           </motion.div>
           <BsChevronCompactUp className="arrow-icon" />
           <BsChevronCompactUp className="arrow-icon1" />
         </section>
       </main>
-      <section className="product-carousel"></section>
+      <section className="product-carousel">
+        <main className="carousel-content" ref={quantRef}>
+          {/* <SwiperProds quant={width} /> */}
+        </main>
+      </section>
       <section className="our-history" ref={histHef}>
         <main className="history-content">
           <div className="hist-image">
@@ -119,12 +139,13 @@ function App() {
           >
             <h1>Nossa História</h1>
             <p>
-              Pirate ipsum arrgh bounty warp jack. Pirate chain locker yarr
-              bilge topsail lugsail pink cat. Tender yard furl tell yard cat.
-              Jib bucko pillage yer yellow lugsail heave line lanyard scourge.
-              Pirate ipsum arrgh bounty warp jack. Pirate chain locker yarr
-              bilge topsail lugsail pink cat. Tender yard furl tell yard cat.
-              Jib bucko pillage yer yellow lugsail heave line lanyard scourge.
+              No dia 1 de Janeiro de 2017, um sonho se deu inicio em Ji-Paraná.
+              A marca Açaí Colonial saiu do sonho de um Rondoniano nascido em
+              Aracajú, <b>Aureo Neuton</b>, que é formado em Direito e Mestre em
+              Artes Culinárias, com destaque em sorveteria e confeitaria. <br />{" "}
+              A empresa é fruto da experiência de mais de 20 anos no mercado de
+              sorveterias, que fez com que o projeto se tornasse o sucesso
+              consolidado que é hoje!
             </p>
           </motion.div>
         </main>
@@ -133,13 +154,16 @@ function App() {
         <main className="video-content">
           <img src={videobg1} alt="" />
           <img src={videobg2} alt="" />
-          <iframe
+          {/* <iframe
             src="https://www.youtube.com/embed/HE9BWs5VfYA"
             title="Restoration of a Rare Honda Civic TYPE R"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen
-          ></iframe>
+          ></iframe> */}
+          <div className="coming-soon">
+            <h1>Em breve...</h1>
+          </div>
         </main>
       </section>
       <section className="mission">
@@ -149,9 +173,8 @@ function App() {
             <div className="mission-text">
               <h2>Missão</h2>
               <p>
-                Pirate ipsum arrgh bounty warp jack. Pirate chain locker yarr
-                bilge topsail lugsail pink cat. Tender yard furl tell yard cat.
-                Jib bucko pillage yer yellow lugsail heave line lanyard scourge.
+                Valorizar os produtos regionais, proporcionado uma experiência
+                gastronômica saudável, energética e prazerosa;
               </p>
             </div>
           </div>
@@ -159,9 +182,8 @@ function App() {
             <div className="mission-text">
               <h2>Visão</h2>
               <p>
-                Pirate ipsum arrgh bounty warp jack. Pirate chain locker yarr
-                bilge topsail lugsail pink cat. Tender yard furl tell yard cat.
-                Jib bucko pillage yer yellow lugsail heave line lanyard scourge.
+                Ser reconhecida como uma empresa comprometida com o
+                desenvolvimento regional e a saúde de seus clientes;
               </p>
             </div>
             <img src={vision} alt="" />
@@ -171,9 +193,8 @@ function App() {
             <div className="mission-text">
               <h2>Valores</h2>
               <p>
-                Pirate ipsum arrgh bounty warp jack. Pirate chain locker yarr
-                bilge topsail lugsail pink cat. Tender yard furl tell yard cat.
-                Jib bucko pillage yer yellow lugsail heave line lanyard scourge.
+                De forma Sustentável, Temos respeito ao meio ambiente, clientes,
+                parceiros e colaboradores;
               </p>
             </div>
           </div>
@@ -184,22 +205,40 @@ function App() {
           <h1>Seja um Franqueado</h1>
           <div className="qualities">
             <div className="quality">
-              <h4>Qualidade 1</h4>
-            </div>
-            <div className="quality">
-              <h4>Qualidade 2</h4>
+              <h4>Quem pode ser?</h4>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Et
-                deleniti accusamus voluptate, ipsa tenetur totam perferendis
-                distinctio ducimus earum facilis cumque consequuntur, ut nemo
-                sit aut quam voluptatibus ipsam tempore.
+                Empreendedores que buscam um negócio seguro e desejam firmar uma
+                parceria com o franqueador. Famílias e casais, jovens que
+                desejam ter seu próprio negócio. Pessoas identificadas com a
+                marca e o produto.
               </p>
             </div>
             <div className="quality">
-              <h4>Qualidade 3</h4>
+              <h4>Por que franquear?</h4>
+              <p>
+                Os anos de experiência permitiram a nossa empresa oferer um
+                produto orgânico, artesanal, sem conservantes, com maior
+                concentração de nutrientes. Criando na região confiança na Açaí
+                Colonial e credibilidade
+              </p>
+            </div>
+            <div className="quality">
+              <h4>O que preciso?</h4>
+              <p>
+                Você precisa valorizar o crescimento profissional, lucratividade
+                e rentabilidade do negócio, o franqueado deve ser dinâmico,
+                positivo, um lider focado e disposto.
+              </p>
             </div>
           </div>
-          <button className="start-button">Tenho Interesse</button>
+          <button
+            className="start-button"
+            onClick={() =>
+              window.open("https://api.whatsapp.com/send?phone=5569992372050")
+            }
+          >
+            Tenho Interesse
+          </button>
         </main>
       </section>
       <section className="insta">

@@ -37,20 +37,32 @@ const Footer = ({ scrollInto }) => {
             </div>
             <div className="text-format">
               <BsTelephone style={{ width: "30px", height: "30px" }} />
-              <p>+55 69 8403-5305</p>
+              <p>+55 69 99237-2050</p>
             </div>
-            <div className="text-format">
+            {/* <div className="text-format">
               <AiOutlineMail style={{ width: "35px", height: "35px" }} />
               <p>contato@acaicolonial.com</p>
-            </div>
+            </div> */}
           </div>
 
           <div className="footer-block">
             <h2>DESENVOLVIMENTO</h2>
             <p>SLIM - Dev</p>
             <div className="social">
-              <AiOutlineInstagram style={{ width: "40px", height: "40px" }} />
-              <AiOutlineWhatsApp style={{ width: "40px", height: "40px" }} />
+              <AiOutlineInstagram
+                style={{ width: "40px", height: "40px", cursor: "pointer" }}
+                onClick={() =>
+                  window.open("https://www.instagram.com/sociallift_media/")
+                }
+              />
+              <AiOutlineWhatsApp
+                style={{ width: "40px", height: "40px", cursor: "pointer" }}
+                onClick={() =>
+                  window.open(
+                    "https://api.whatsapp.com/send?phone=5566992088625"
+                  )
+                }
+              />
             </div>
             <img src={logoSlim} alt="SLIM" />
           </div>
