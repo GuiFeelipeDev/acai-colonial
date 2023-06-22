@@ -607,6 +607,10 @@
   }
   .texts h1{
     margin-top: 0;
+    font-size: 50px;
+  }
+  .texts h3{
+    font-weight: 500;
   }
   .leaf{
     max-width: 500px;
@@ -617,6 +621,9 @@
   }
   .arrow-icon, .arrow-icon1{
     display: none;
+  }
+  .hist-text h1{
+    font-size: 48px;
   }
   .hist-image img:nth-child(2){
     margin-left: 0;
@@ -636,6 +643,12 @@
   }
   .video-content img{
     display: none;
+  }
+  .mission-text h2{
+    font-size: 48px;
+  }
+  .franq-content h1{
+    font-size: 48px;
   }
   .block1{
     justify-content: center;
