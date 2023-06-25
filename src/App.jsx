@@ -95,7 +95,7 @@ function App() {
             <button
               className="start-button"
               onClick={() =>
-                window.open("https://www.instagram.com/acaicolonialjipa/")
+                window.open("https://www.instagram.com/acaicolonialfabrica/")
               }
             >
               Saiba Mais
@@ -107,7 +107,7 @@ function App() {
       </main>
       <section className="product-carousel">
         <main className="carousel-content" ref={quantRef}>
-          {/* <SwiperProds quant={width} /> */}
+          <SwiperProds quant={width} />
         </main>
       </section>
       <section className="our-history" ref={histHef}>
@@ -162,7 +162,11 @@ function App() {
             allowfullscreen
           ></iframe> */}
           <div className="coming-soon">
-            <h1>Em breve...</h1>
+            <h3>
+              Em breve...
+              <br />
+              Nosso vídeo institucional.
+            </h3>
           </div>
         </main>
       </section>
