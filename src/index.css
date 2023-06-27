@@ -760,11 +760,13 @@
 }
 
 @media (max-width: 1680px){
-  .video-content img:nth-child(1){
-    left: -200px;
+  .inst-video{
+    overflow: hidden;
   }
-  .video-content img:nth-child(2){
-    right: -200px;
+
+  .video-content img{
+    max-width: 400px;
+    object-fit: cover;
   }
 }
 
