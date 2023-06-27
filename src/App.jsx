@@ -110,7 +110,8 @@ function App() {
           <SwiperProds quant={width} />
         </main>
       </section>
-      <section className="our-history" ref={histHef}>
+      <div className="floathist" ref={histHef}></div>
+      <section className="our-history">
         <main className="history-content">
           <div className="hist-image">
             <motion.img
@@ -150,7 +151,8 @@ function App() {
           </motion.div>
         </main>
       </section>
-      <section className="inst-video" ref={instHef}>
+      <section className="inst-video">
+        <div className="floating-ref" ref={instHef}></div>
         <main className="video-content">
           <img src={videobg1} alt="" />
           <img src={videobg2} alt="" />
@@ -204,8 +206,9 @@ function App() {
           </div>
         </main>
       </section>
-      <section className="franq" ref={franqHef}>
+      <section className="franq">
         <main className="franq-content">
+          <div className="floating-ref" ref={franqHef}></div>
           <h1>Seja um Franqueado</h1>
           <div className="qualities">
             <div className="quality">
@@ -220,7 +223,7 @@ function App() {
             <div className="quality">
               <h4>Por que franquear?</h4>
               <p>
-                Os anos de experiência permitiram a nossa empresa oferer um
+                Os anos de experiência permitiram a nossa empresa oferecer um
                 produto orgânico, artesanal, sem conservantes, com maior
                 concentração de nutrientes. Criando na região confiança na Açaí
                 Colonial e credibilidade

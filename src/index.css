@@ -686,6 +686,7 @@
     font-size: 20px;
     font-weight: 300;
   }
+  
 }
 
 .swiper {
@@ -804,4 +805,20 @@
   background-color: var(--mainColor);
   position: absolute;
   bottom: -50%;
+}
+
+.floating-ref{
+ 
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  margin-top: -260px;
+}
+
+.floathist{
+
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  margin-top: -200px;
 }
