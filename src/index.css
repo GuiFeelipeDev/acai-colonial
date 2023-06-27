@@ -726,14 +726,14 @@
 
   }
   .hist-image img:nth-child(1){
-    width: 460px;
-    height: 460px;
+    max-width: 460px;
+    max-height: 460px;
   }
   .start-section{
     justify-content: space-around;
   }
   .start-section img{
-    height: 480px;
+    max-height: 480px;
   }
   .coming-soon{
     max-width: 900px;
@@ -754,8 +754,8 @@
     margin-top: 20px;
   }
   .hist-image img:nth-child(1){
-    width: 440px;
-    height: 440px;
+    max-width: 440px;
+    max-height: 440px;
   }
 }
 
@@ -765,6 +765,24 @@
   }
   .video-content img:nth-child(2){
     right: -200px;
+  }
+}
+
+@media (max-width: 600px){
+  .floating-ref{
+ 
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    margin-top: -120px;
+  }
+  
+  .floathist{
+  
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    margin-top: -80px;
   }
 }
 
