@@ -199,7 +199,7 @@ function App() {
             <div className="mission-text">
               <h2>Valores</h2>
               <p>
-                De forma Sustentável, Temos respeito ao meio ambiente, clientes,
+                De forma sustentável, temos respeito ao meio ambiente, clientes,
                 parceiros e colaboradores;
               </p>
             </div>
@@ -226,7 +226,7 @@ function App() {
                 Os anos de experiência permitiram a nossa empresa oferecer um
                 produto orgânico, artesanal, sem conservantes, com maior
                 concentração de nutrientes. Criando na região confiança na Açaí
-                Colonial e credibilidade
+                Colonial e credibilidade.
               </p>
             </div>
             <div className="quality">

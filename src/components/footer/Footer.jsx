@@ -33,7 +33,10 @@ const Footer = ({ scrollInto }) => {
             <h2>Contato</h2>
             <div className="text-format">
               <IoLocationSharp style={{ width: "40px", height: "40px" }} />
-              <p>Rua dos Mineiros, 55 Centro – 76900-115 Ji-Paraná-RO</p>
+              <p>
+                Av. Nações Unidas, 2013, Princesa Isabel - 76964-019 - Cacoal,
+                RO
+              </p>
             </div>
             <div className="text-format">
               <BsTelephone style={{ width: "30px", height: "30px" }} />
