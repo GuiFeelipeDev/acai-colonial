@@ -85,7 +85,7 @@ function App() {
           >
             <div className="texts">
               <h1>AÇAÍ COLONIAL</h1>
-              <h3>"O melhor açaí de Rondônia"</h3>
+              <h3>"Um conceito de qualidade regional"</h3>
               <p>
                 Para nós, açaí não é só para saborear, mas também aproveitar a
                 companhia das pessoas que amamos. Venha fazer parte dessa
