@@ -6,8 +6,8 @@ import tenL from "../../assets/img/10l.png"
 
 export const allSlides = [
   { img: oneL, title: "Açaí 1 Litro" },
-  { img: twoL, title: "Açaí 2 Litros" },
+  { img: oneL, title: "Açaí 2 Litros" },
   { img: threeL, title: "Açaí 3,6 Litros" },
-  { img: fiveL, title: "Açaí 5 Litros" },
-  { img: tenL, title: "Açaí 10 Litros" },
+  { img: threeL, title: "Açaí 5 Litros" },
+  { img: threeL, title: "Açaí 10 Litros" },
 ]

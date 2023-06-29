@@ -26,7 +26,10 @@
 }
 
 .header-main img {
-  max-height: 100px;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 .header-content{

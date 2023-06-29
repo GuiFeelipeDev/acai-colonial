@@ -142,11 +142,11 @@ function App() {
             <p>
               No dia 1 de Janeiro de 2017, um sonho se deu inicio em Ji-Paraná.
               A marca Açaí Colonial saiu do sonho de um Rondoniano nascido em
-              Aracajú, <b>Aureo Neuton</b>, que é formado em Direito e Mestre em
-              Artes Culinárias, com destaque em sorveteria e confeitaria. <br />{" "}
-              A empresa é fruto da experiência de mais de 20 anos no mercado de
-              sorveterias, que fez com que o projeto se tornasse o sucesso
-              consolidado que é hoje!
+              Aracajú, <b>Aureo Neuton da Silva</b>, que é formado em Direito e
+              Mestre em Artes Culinárias, com destaque em sorveteria e
+              confeitaria. <br /> A empresa é fruto da experiência de mais de 20
+              anos no mercado de sorveterias, que fez com que o projeto se
+              tornasse o sucesso consolidado que é hoje!
             </p>
           </motion.div>
         </main>
